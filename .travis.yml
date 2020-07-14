@@ -3,7 +3,7 @@ node_js:
   - 12
 install: npm install
 scripts:
-  - npm run predeploy
+  - npm run build
 deploy:
   provider: pages
   local_dir: build
