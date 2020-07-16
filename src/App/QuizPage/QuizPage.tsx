@@ -8,7 +8,7 @@ const randomWords = require('random-words');
 export function QuizPage() {
   const location = useLocation<{ quiz: Quiz }>();
   const locationQuiz = location.state && location.state.quiz;
-  const [quiz, setQuiz] = useState(locationQuiz || generateRandomQuiz());
+  const [quiz] = useState(locationQuiz || generateRandomQuiz());
   const [questionKey, setQuestionKey] = useState(Math.random());
   const [results, setResults] = useState([] as WordResult[]);
   const [answers, setAnswers] = useState(new Array(quiz.questions.length) as string[]);
