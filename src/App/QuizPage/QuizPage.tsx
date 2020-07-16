@@ -3,6 +3,8 @@ import { Question, QuizQuestion } from "./Question/Question";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 
+const randomWords = require('random-words');
+
 export function QuizPage() {
   const location = useLocation<{ quiz: Quiz }>();
   const locationQuiz = location.state && location.state.quiz;
@@ -34,14 +36,7 @@ export function QuizPage() {
 
 function generateRandomQuiz(): Quiz {
   return {
-    questions: [
-      { word: "fish", sentence: "I like to fish by the sea" },
-      { word: "goat", sentence: "The hairy goat ran away" },
-      { word: "chicken", sentence: "The chicken went beeerk" },
-      { word: "pizza", sentence: "I put a pizza in the oven" },
-      { word: "banana", sentence: "I slipped on the banana skin" },
-      { word: "apple", sentence: "I shot an apple off my sisters head" }
-    ]
+    questions: randomWords(10).map((word: string) => ({ word }))
   };
 }
 
@@ -53,7 +48,7 @@ function checkAnswer(word: string, answer: string): boolean[] {
   return answer
     .toLowerCase()
     .split("")
-    .map((char, i) => char !== word.charAt(i).toLowerCase());
+    .map((char, i) => char === word.charAt(i).toLowerCase());
 }
 
 export interface Quiz {
