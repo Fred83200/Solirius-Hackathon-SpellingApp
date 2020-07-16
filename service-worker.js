@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hackathon-spelling-app/precache-manifest.c92214604daaf02b471a61653b85651f.js"
+  "/hackathon-spelling-app/precache-manifest.b8a0f507512fa554201977319a701299.js"
 );
 
 self.addEventListener('message', (event) => {

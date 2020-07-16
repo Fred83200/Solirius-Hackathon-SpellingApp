@@ -1,23 +1,25 @@
 {
   "files": {
-    "main.css": "/hackathon-spelling-app/static/css/main.5f361e03.chunk.css",
-    "main.js": "/hackathon-spelling-app/static/js/main.f8ba90de.chunk.js",
-    "main.js.map": "/hackathon-spelling-app/static/js/main.f8ba90de.chunk.js.map",
+    "main.css": "/hackathon-spelling-app/static/css/main.22dc3dc7.chunk.css",
+    "main.js": "/hackathon-spelling-app/static/js/main.238b8023.chunk.js",
+    "main.js.map": "/hackathon-spelling-app/static/js/main.238b8023.chunk.js.map",
     "runtime-main.js": "/hackathon-spelling-app/static/js/runtime-main.60362ca9.js",
     "runtime-main.js.map": "/hackathon-spelling-app/static/js/runtime-main.60362ca9.js.map",
-    "static/js/2.fc2b6d71.chunk.js": "/hackathon-spelling-app/static/js/2.fc2b6d71.chunk.js",
-    "static/js/2.fc2b6d71.chunk.js.map": "/hackathon-spelling-app/static/js/2.fc2b6d71.chunk.js.map",
+    "static/css/2.829c9cb5.chunk.css": "/hackathon-spelling-app/static/css/2.829c9cb5.chunk.css",
+    "static/js/2.1c95fb7d.chunk.js": "/hackathon-spelling-app/static/js/2.1c95fb7d.chunk.js",
+    "static/js/2.1c95fb7d.chunk.js.map": "/hackathon-spelling-app/static/js/2.1c95fb7d.chunk.js.map",
     "index.html": "/hackathon-spelling-app/index.html",
-    "precache-manifest.c92214604daaf02b471a61653b85651f.js": "/hackathon-spelling-app/precache-manifest.c92214604daaf02b471a61653b85651f.js",
+    "precache-manifest.b8a0f507512fa554201977319a701299.js": "/hackathon-spelling-app/precache-manifest.b8a0f507512fa554201977319a701299.js",
     "service-worker.js": "/hackathon-spelling-app/service-worker.js",
-    "static/css/main.5f361e03.chunk.css.map": "/hackathon-spelling-app/static/css/main.5f361e03.chunk.css.map",
-    "static/js/2.fc2b6d71.chunk.js.LICENSE.txt": "/hackathon-spelling-app/static/js/2.fc2b6d71.chunk.js.LICENSE.txt",
-    "static/media/logo.svg": "/hackathon-spelling-app/static/media/logo.5d5d9eef.svg"
+    "static/css/2.829c9cb5.chunk.css.map": "/hackathon-spelling-app/static/css/2.829c9cb5.chunk.css.map",
+    "static/css/main.22dc3dc7.chunk.css.map": "/hackathon-spelling-app/static/css/main.22dc3dc7.chunk.css.map",
+    "static/js/2.1c95fb7d.chunk.js.LICENSE.txt": "/hackathon-spelling-app/static/js/2.1c95fb7d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.60362ca9.js",
-    "static/js/2.fc2b6d71.chunk.js",
-    "static/css/main.5f361e03.chunk.css",
-    "static/js/main.f8ba90de.chunk.js"
+    "static/css/2.829c9cb5.chunk.css",
+    "static/js/2.1c95fb7d.chunk.js",
+    "static/css/main.22dc3dc7.chunk.css",
+    "static/js/main.238b8023.chunk.js"
   ]
 }
