@@ -26,8 +26,8 @@ export function Question(props: QuestionProps) {
     const markIcon = typeof props.result === "undefined"
         ? ""
         : props.result.every(r => r)
-            ? <FontAwesomeIcon icon={faCheck} style={{color: 'green'}} />
-            : <FontAwesomeIcon icon={faTimes} style={{color: 'red'}}/>;
+            ? <FontAwesomeIcon icon={faCheck} style={{color: 'green'}} className='logo-check' />
+            : <FontAwesomeIcon icon={faTimes} style={{color: 'red'}} className='logo-wrong'/>;
 
     const onChange = (value: string) => {
         props.onUpdate(props.number, value);
