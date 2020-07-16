@@ -68,15 +68,17 @@ export function Question(props: QuestionProps) {
                 <span className="input-group-text btn sound-playing" onClick={onClickPlay}>{buttonChar}</span>
             </div>
 
-            <RICIBs
-                amount={props.question.word.length}
-                handleOutputString={onChange}
-                inputRegExp={/^[a-zA-Z0-9_.-]*$/}
-                inputProps={inputProps}
-            />
-            <span>{markIcon}</span>
-        </div>
-    );
+      <label className="question-input form-control form-control-lg">
+        <RICIBs
+          amount={props.question.word.length}
+          handleOutputString={onChange}
+          inputRegExp={/^[a-zA-Z0-9_.-]*$/ }
+          inputProps={ inputProps }
+        />
+      </label>
+      <span>{ markIcon }</span>
+    </div>
+  );
 }
 
 export interface QuestionProps {
