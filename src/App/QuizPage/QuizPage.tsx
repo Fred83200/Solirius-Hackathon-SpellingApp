@@ -28,9 +28,10 @@ export function QuizPage() {
     setAnswers(answers);
   };
 
-  const onRestart = () => {
+  const onNewQuiz = () => {
     setAnswers(new Array(quiz.questions.length));
     setResults([]);
+    setQuiz(generateRandomQuiz());
     setQuestionKey(Math.random());
   };
 
@@ -41,7 +42,7 @@ export function QuizPage() {
 
       <div className="container text-center">
         <Link className="btn btn-secondary btn-lg my-3" to="/">Home</Link>
-        <button className="btn btn-secondary btn-lg my-3 ml-3" onClick={onRestart}>Restart</button>
+        <button className="btn btn-secondary btn-lg my-3 ml-3" onClick={onNewQuiz}>New Quiz</button>
         <button className="btn btn-secondary btn-lg my-3 ml-3" onClick={onClickReveal}>Reveal Answers</button>
         <button className="btn btn-primary btn-lg my-3 ml-3" onClick={onClickMark}>Mark Answers</button>
       </div>
