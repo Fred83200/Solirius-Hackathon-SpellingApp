@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/hackathon-spelling-app/static/css/main.8a592756.chunk.css",
-    "main.js": "/hackathon-spelling-app/static/js/main.174c6e91.chunk.js",
-    "main.js.map": "/hackathon-spelling-app/static/js/main.174c6e91.chunk.js.map",
+    "main.js": "/hackathon-spelling-app/static/js/main.c4295358.chunk.js",
+    "main.js.map": "/hackathon-spelling-app/static/js/main.c4295358.chunk.js.map",
     "runtime-main.js": "/hackathon-spelling-app/static/js/runtime-main.60362ca9.js",
     "runtime-main.js.map": "/hackathon-spelling-app/static/js/runtime-main.60362ca9.js.map",
     "static/css/2.829c9cb5.chunk.css": "/hackathon-spelling-app/static/css/2.829c9cb5.chunk.css",
-    "static/js/2.63d7320e.chunk.js": "/hackathon-spelling-app/static/js/2.63d7320e.chunk.js",
-    "static/js/2.63d7320e.chunk.js.map": "/hackathon-spelling-app/static/js/2.63d7320e.chunk.js.map",
+    "static/js/2.fcd08829.chunk.js": "/hackathon-spelling-app/static/js/2.fcd08829.chunk.js",
+    "static/js/2.fcd08829.chunk.js.map": "/hackathon-spelling-app/static/js/2.fcd08829.chunk.js.map",
     "index.html": "/hackathon-spelling-app/index.html",
-    "precache-manifest.6ec18e5a8fc81911f48a954f1440d145.js": "/hackathon-spelling-app/precache-manifest.6ec18e5a8fc81911f48a954f1440d145.js",
+    "precache-manifest.b2cfd82f582ece852edfde249f6b207e.js": "/hackathon-spelling-app/precache-manifest.b2cfd82f582ece852edfde249f6b207e.js",
     "service-worker.js": "/hackathon-spelling-app/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/hackathon-spelling-app/static/css/2.829c9cb5.chunk.css.map",
     "static/css/main.8a592756.chunk.css.map": "/hackathon-spelling-app/static/css/main.8a592756.chunk.css.map",
-    "static/js/2.63d7320e.chunk.js.LICENSE.txt": "/hackathon-spelling-app/static/js/2.63d7320e.chunk.js.LICENSE.txt"
+    "static/js/2.fcd08829.chunk.js.LICENSE.txt": "/hackathon-spelling-app/static/js/2.fcd08829.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.60362ca9.js",
     "static/css/2.829c9cb5.chunk.css",
-    "static/js/2.63d7320e.chunk.js",
+    "static/js/2.fcd08829.chunk.js",
     "static/css/main.8a592756.chunk.css",
-    "static/js/main.174c6e91.chunk.js"
+    "static/js/main.c4295358.chunk.js"
   ]
 }
