@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import "./Question.css";
 import { WordResult } from "../QuizPage";
-
+import AWS from "aws-sdk";
 const RICIBs = require("react-individual-character-input-boxes2").default;
+
+AWS.config.region = 'us-east-2';
+AWS.config.credentials = new AWS.CognitoIdentityCredentials(
+    {IdentityPoolId: 'us-east-2:d17e443c-5c74-4812-9b45-ffe150848407'});
+const speechParams = {
+  OutputFormat: 'mp3',
+  Text: '',
+  VoiceId: 'Carla'
+};
+const signer = new AWS.Polly.Presigner();
 
 export function Question(props: QuestionProps) {
   const [soundPlaying, setSoundPlaying] = useState(false);
@@ -15,10 +25,30 @@ export function Question(props: QuestionProps) {
 
   const onChange = (value: string) => {
     props.onUpdate(props.number, value);
-  }
+  };
 
-  const onClickPlay = () => {
+
+  const playAudio = (speech: string) => {
+   return new Promise((resolve, reject) => {
+     speechParams.Text = speech;
+
+     signer.getSynthesizeSpeechUrl(speechParams,  (error: Error, url: string) => {
+       if (error) {
+         console.log(error);
+       } else {
+         const audio = new Audio(url);
+         audio.play();
+         audio.onended = resolve;
+       }
+     });
+   })
+  };
+
+  const onClickPlay = async () => {
     setSoundPlaying(!soundPlaying);
+
+    await playAudio(props.question.word);
+    if (props.question.sentence) { playAudio(props.question.sentence) };
 
     // sound is playing, ignore the !
     if (!soundPlaying) {
