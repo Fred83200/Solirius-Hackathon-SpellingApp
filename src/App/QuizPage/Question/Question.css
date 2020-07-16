@@ -21,4 +21,9 @@
   border: 0;
   font-size: 32px;
   margin: -8px 0 0 0;
+  outline: none;
+}
+
+.question-input input:active {
+  outline: none;
 }
