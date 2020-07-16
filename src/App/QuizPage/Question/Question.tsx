@@ -15,7 +15,7 @@ AWS.config.credentials = new AWS.CognitoIdentityCredentials(
 const speechParams = {
     OutputFormat: 'mp3',
     Text: '',
-    VoiceId: 'Joanna'
+    VoiceId: 'Amy'
 };
 const signer = new AWS.Polly.Presigner();
 const audio = new Audio();
