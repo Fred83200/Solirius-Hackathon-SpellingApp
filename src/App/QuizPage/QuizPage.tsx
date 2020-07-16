@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { Question, QuizQuestion } from "./Question/Question";
+import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
-export function QuizPage(props: QuizPageProps) {
-  const [quiz] = useState(props.quiz || generateRandomQuiz());
+export function QuizPage() {
+  const location = useLocation<{ quiz: Quiz }>();
+  const locationQuiz = location.state && location.state.quiz;
+  const [quiz] = useState(locationQuiz || generateRandomQuiz());
   const [results, setResults] = useState([] as WordResult[]);
   const [answers, setAnswers] = useState(new Array(quiz.questions.length) as string[]);
 
@@ -21,7 +25,8 @@ export function QuizPage(props: QuizPageProps) {
       { quiz.questions.map((q, i) => <Question key={i} question={q} number={i} result={results[i]} onUpdate={onUpdateAnswer}/>) }
 
       <div className="container text-center">
-        <button className="btn btn-primary btn-lg m-3" onClick={onClickMark}>Mark</button>
+        <Link className="btn btn-secondary btn-lg my-3" to="/">Home</Link>
+        <button className="btn btn-primary btn-lg my-3 ml-3" onClick={onClickMark}>Mark Answers</button>
       </div>
     </section>
   );
@@ -49,10 +54,6 @@ function checkAnswer(word: string, answer: string): number {
     .toLowerCase()
     .split("")
     .findIndex((char, i) => char !== word.charAt(i).toLowerCase());
-}
-
-export interface QuizPageProps {
-  quiz?: Quiz
 }
 
 export interface Quiz {

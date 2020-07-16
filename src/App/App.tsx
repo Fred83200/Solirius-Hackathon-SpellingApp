@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import { HomePage } from './HomePage/HomePage';
 import { QuizPage } from './QuizPage/QuizPage';
+import { CreatePage } from './CreatePage/CreatePage';
 
 export function App() {
   return (
@@ -24,8 +25,8 @@ export function App() {
           <Route path="/quiz">
             <QuizPage />
           </Route>
-          <Route path="/users">
-            {/*<CreatePage />*/}
+          <Route path="/create">
+            <CreatePage />
           </Route>
           <Route path="/">
             <HomePage />
