@@ -61,9 +61,12 @@ export function Question(props: QuestionProps) {
       setSoundPlaying(false);
     };
 
-    const inputProps = new Array(props.question.word.length)
-        .fill({placeholder: "_"})
-        .map((o, i) => props.result && !props.result[i] ? {...o, className: "box-red"} : o);
+    const inputProps = !props.reveal ? new Array(props.question.word.length)
+        .fill({placeholder: '_'})
+        .map((o, i) => props.result && !props.result[i] ? {...o, className: "box-red"} : o)
+        : new Array(props.question.word.length)
+            .fill(null)
+            .map((_, i) => ({value: props.question.word[i]}));
 
     return (
         <div className="input-group input-group-lg my-3">
@@ -90,6 +93,7 @@ export interface QuestionProps {
     question: QuizQuestion,
     result?: WordResult
     onUpdate: (number: number, answer: string) => any
+    reveal: boolean,
 }
 
 export interface QuizQuestion {

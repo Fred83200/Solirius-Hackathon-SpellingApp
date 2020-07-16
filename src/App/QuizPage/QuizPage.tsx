@@ -8,13 +8,19 @@ const randomWords = require('random-words');
 export function QuizPage() {
   const location = useLocation<{ quiz: Quiz }>();
   const locationQuiz = location.state && location.state.quiz;
-  const [quiz] = useState(locationQuiz || generateRandomQuiz());
+  const [quiz, setQuiz] = useState(locationQuiz || generateRandomQuiz());
   const [questionKey, setQuestionKey] = useState(Math.random());
   const [results, setResults] = useState([] as WordResult[]);
   const [answers, setAnswers] = useState(new Array(quiz.questions.length) as string[]);
+  const [reveal, setReveal] = useState(false);
 
   const onClickMark = () => {
     setResults(markQuiz(quiz, answers));
+  };
+
+  const onClickReveal = () => {
+    console.log(reveal);
+    setReveal(!reveal);
   };
 
   const onUpdateAnswer = (i: number, answer: string) => {
@@ -31,11 +37,12 @@ export function QuizPage() {
   return (
     <section className="container">
       <p className="my-3">Enter your answers below. Press the &#9654; button to hear the word.</p>
-      { quiz.questions.map((q, i) => <Question key={questionKey + i} question={q} number={i} result={results[i]} onUpdate={onUpdateAnswer}/>) }
+      { quiz.questions.map((q, i) => <Question key={questionKey + i} question={q} number={i} result={results[i]} reveal={reveal} onUpdate={onUpdateAnswer}/>)  }
 
       <div className="container text-center">
         <Link className="btn btn-secondary btn-lg my-3" to="/">Home</Link>
         <button className="btn btn-secondary btn-lg my-3 ml-3" onClick={onRestart}>Restart</button>
+        <button className="btn btn-secondary btn-lg my-3 ml-3" onClick={onClickReveal}>Reveal Answers</button>
         <button className="btn btn-primary btn-lg my-3 ml-3" onClick={onClickMark}>Mark Answers</button>
       </div>
     </section>
