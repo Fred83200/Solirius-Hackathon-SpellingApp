@@ -36,7 +36,7 @@ export function QuizPage() {
 
 function generateRandomQuiz(): Quiz {
   return {
-    questions: randomWords(10).map((word: string) => ({ word }))
+    questions: randomWords(8).map((word: string) => ({ word }))
   };
 }
 
