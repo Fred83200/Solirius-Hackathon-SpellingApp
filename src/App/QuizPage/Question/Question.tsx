@@ -1,9 +1,10 @@
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
 import "./Question.css";
 import { WordResult } from "../QuizPage";
 
+const RICIBs = require("react-individual-character-input-boxes2").default;
+
 export function Question(props: QuestionProps) {
-  const [value, setValue] = useState("");
   const [soundPlaying, setSoundPlaying] = useState(false);
   const buttonChar = soundPlaying ? "■" : "▶";
   const markIcon = typeof props.result === "undefined"
@@ -12,11 +13,8 @@ export function Question(props: QuestionProps) {
       ? "tick"
       : "cross";
 
-  const placeholder = new Array(props.question.word.length).fill("_").join(" ");
-
-  const onChange = (e: FormEvent<HTMLInputElement>) => {
-    setValue(e.currentTarget.value);
-    props.onUpdate(props.number, e.currentTarget.value);
+  const onChange = (value: string) => {
+    props.onUpdate(props.number, value);
   }
 
   const onClickPlay = () => {
@@ -32,13 +30,23 @@ export function Question(props: QuestionProps) {
     }
   };
 
+  const inputProps = new Array(props.question.word.length)
+    .fill({ placeholder: "_" })
+    .map((o, i) => i === props.result ? { ...o, className: "box-red" } : o);
+
   return (
     <div className="input-group input-group-lg my-3">
       <span className="number-text text-muted">{ props.number + 1 })</span>
       <div className="input-group-prepend">
         <span className="input-group-text btn sound-playing" onClick={onClickPlay}>{buttonChar}</span>
       </div>
-      <input type="text" className="form-control" placeholder={placeholder} value={value} onChange={onChange}/>
+
+      <RICIBs
+        amount={props.question.word.length}
+        handleOutputString={onChange}
+        inputRegExp={/^[a-zA-Z0-9_.-]*$/ }
+        inputProps={ inputProps }
+      />
       <span>{ markIcon }</span>
     </div>
   );

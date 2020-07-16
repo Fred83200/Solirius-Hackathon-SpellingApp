@@ -7,3 +7,8 @@
 .sound-playing {
   width: 50px;
 }
+
+.box-red {
+  border-color: red;
+  color: red;
+}
