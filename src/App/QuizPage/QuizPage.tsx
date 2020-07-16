@@ -28,6 +28,7 @@ export function QuizPage() {
 
       <div className="container text-center">
         <Link className="btn btn-secondary btn-lg my-3" to="/">Home</Link>
+        <button className="btn btn-secondary btn-lg my-3 ml-3" onClick={() => window.location.reload(false)}>Click to restart</button>
         <button className="btn btn-primary btn-lg my-3 ml-3" onClick={onClickMark}>Mark Answers</button>
       </div>
     </section>
