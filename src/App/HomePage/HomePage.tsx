@@ -6,7 +6,7 @@ export function HomePage() {
   return (
     <section className="jumbotron text-center">
       <div className="container">
-        <p className="logo">A</p>
+        <p className="logo">abc</p>
         <h1>Spelling App</h1>
         <p>Teach your child to read real good. Or is it gooderer?</p>
         <p>
