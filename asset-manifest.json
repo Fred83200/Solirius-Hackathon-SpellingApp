@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/hackathon-spelling-app/static/css/main.8a592756.chunk.css",
-    "main.js": "/hackathon-spelling-app/static/js/main.3a68e33f.chunk.js",
-    "main.js.map": "/hackathon-spelling-app/static/js/main.3a68e33f.chunk.js.map",
+    "main.js": "/hackathon-spelling-app/static/js/main.260f6f5d.chunk.js",
+    "main.js.map": "/hackathon-spelling-app/static/js/main.260f6f5d.chunk.js.map",
     "runtime-main.js": "/hackathon-spelling-app/static/js/runtime-main.60362ca9.js",
     "runtime-main.js.map": "/hackathon-spelling-app/static/js/runtime-main.60362ca9.js.map",
     "static/css/2.829c9cb5.chunk.css": "/hackathon-spelling-app/static/css/2.829c9cb5.chunk.css",
     "static/js/2.033539b5.chunk.js": "/hackathon-spelling-app/static/js/2.033539b5.chunk.js",
     "static/js/2.033539b5.chunk.js.map": "/hackathon-spelling-app/static/js/2.033539b5.chunk.js.map",
     "index.html": "/hackathon-spelling-app/index.html",
-    "precache-manifest.934a7cba7d72e4a5c7530513f12c83df.js": "/hackathon-spelling-app/precache-manifest.934a7cba7d72e4a5c7530513f12c83df.js",
+    "precache-manifest.556818c1fc6e21ce21ad3ba091a40662.js": "/hackathon-spelling-app/precache-manifest.556818c1fc6e21ce21ad3ba091a40662.js",
     "service-worker.js": "/hackathon-spelling-app/service-worker.js",
     "static/css/2.829c9cb5.chunk.css.map": "/hackathon-spelling-app/static/css/2.829c9cb5.chunk.css.map",
     "static/css/main.8a592756.chunk.css.map": "/hackathon-spelling-app/static/css/main.8a592756.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.829c9cb5.chunk.css",
     "static/js/2.033539b5.chunk.js",
     "static/css/main.8a592756.chunk.css",
-    "static/js/main.3a68e33f.chunk.js"
+    "static/js/main.260f6f5d.chunk.js"
   ]
 }

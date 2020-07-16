@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "832a49569719f110ad5d8f5af51bf585",
+    "revision": "c99e423eb142e87404a72056930c1ae7",
     "url": "/hackathon-spelling-app/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hackathon-spelling-app/static/css/2.829c9cb5.chunk.css"
   },
   {
-    "revision": "843bec6112151179ac2e",
+    "revision": "c6f0841106792935023a",
     "url": "/hackathon-spelling-app/static/css/main.8a592756.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hackathon-spelling-app/static/js/2.033539b5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "843bec6112151179ac2e",
-    "url": "/hackathon-spelling-app/static/js/main.3a68e33f.chunk.js"
+    "revision": "c6f0841106792935023a",
+    "url": "/hackathon-spelling-app/static/js/main.260f6f5d.chunk.js"
   },
   {
     "revision": "1da348e000dcdd4dc924",
