@@ -3,7 +3,7 @@ import { Word } from "./Word/Word";
 
 export function QuizPage(props: QuizPageProps) {
   const [quiz] = useState(props.quiz || generateRandomQuiz());
-  const [results, setResults] = useState([] as boolean[]);
+  const [results] = useState([] as boolean[]);
 
   return (
     <section className="container text-center">
