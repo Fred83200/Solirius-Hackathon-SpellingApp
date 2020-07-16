@@ -2,6 +2,10 @@ import React, {useState} from "react";
 import "./Question.css";
 import {WordResult} from "../QuizPage";
 import AWS from "aws-sdk";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
+
 
 const RICIBs = require("react-individual-character-input-boxes2").default;
 
@@ -22,8 +26,8 @@ export function Question(props: QuestionProps) {
     const markIcon = typeof props.result === "undefined"
         ? ""
         : props.result.every(r => r)
-            ? "tick"
-            : "cross";
+            ? <FontAwesomeIcon icon={faCheck} style={{color: 'green'}} />
+            : <FontAwesomeIcon icon={faTimes} style={{color: 'red'}}/>;
 
     const onChange = (value: string) => {
         props.onUpdate(props.number, value);
