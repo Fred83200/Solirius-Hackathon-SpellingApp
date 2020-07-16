@@ -29,6 +29,7 @@ export function QuizPage() {
   };
 
   const onNewQuiz = () => {
+    setReveal(false);
     setAnswers(new Array(quiz.questions.length));
     setResults([]);
     setQuiz(generateRandomQuiz());
