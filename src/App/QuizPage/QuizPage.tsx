@@ -45,15 +45,15 @@ function generateRandomQuiz(): Quiz {
   };
 }
 
-function markQuiz(quiz: Quiz, answers: string[]): number[] {
+function markQuiz(quiz: Quiz, answers: string[]): boolean[][] {
   return answers.map((answer, i) => checkAnswer(quiz.questions[i].word, answer));
 }
 
-function checkAnswer(word: string, answer: string): number {
+function checkAnswer(word: string, answer: string): boolean[] {
   return answer
     .toLowerCase()
     .split("")
-    .findIndex((char, i) => char !== word.charAt(i).toLowerCase());
+    .map((char, i) => char !== word.charAt(i).toLowerCase());
 }
 
 export interface Quiz {
@@ -61,6 +61,6 @@ export interface Quiz {
 }
 
 /**
- * Index of failure, or -1 if spelling is correct
+ * outcome of each character match
  */
-export type WordResult = number;
+export type WordResult = boolean[];

@@ -21,7 +21,7 @@ export function Question(props: QuestionProps) {
     const buttonChar = soundPlaying ? "■" : "▶";
     const markIcon = typeof props.result === "undefined"
         ? ""
-        : props.result === -1
+        : props.result.every(r => r)
             ? "tick"
             : "cross";
 
@@ -59,7 +59,7 @@ export function Question(props: QuestionProps) {
 
     const inputProps = new Array(props.question.word.length)
         .fill({placeholder: "_"})
-        .map((o, i) => i === props.result ? {...o, className: "box-red"} : o);
+        .map((o, i) => props.result && !props.result[i] ? {...o, className: "box-red"} : o);
 
     return (
         <div className="input-group input-group-lg my-3">
